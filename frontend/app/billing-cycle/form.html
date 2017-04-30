@@ -1,0 +1,13 @@
+<div role="form">
+  <div class="box-body">
+    <field id="name" label="Name:" grid="12 6 4" placeholder="Enter the name" model="vm.billingCycle.name"></field>
+    <field id="month" label="Month:" grid="12 6 4" placeholder="Enter the month" type="number" model="vm.billingCycle.month"></field>
+    <field id="year" label="Year:" grid="12 6 4" placeholder="Enter the year" type="number" model="vm.billingCycle.year"></field>
+  </div>
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="vm.create()">Insert</button>
+    <button class="btn btn-info">Update</button>
+    <button class="btn btn-danger">Delete</button>
+    <button class="btn btn-defaut">Cancel</button>
+  </div>
+</div>

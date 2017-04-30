@@ -2,8 +2,8 @@
 
 <section class="content" ng-controller="DashboardCtrl as vm">
   <div class="row">
-    <value-box grid="4" color="bg-green" value="R$ {{vm.credit | number:2}}" label="Total de Créditos" icon-class="fa-bank"></value-box>
-    <value-box grid="4" color="bg-red" value="R$ {{vm.debt | number:2}}" label="Total de Débitos" icon-class="fa-money"></value-box>
-    <value-box grid="4" color="bg-blue" value="R$ {{vm.total | number:2}}" label="Valor consolidado" icon-class="fa-bar-chart"></value-box>
+    <value-box grid="4" color="bg-green" value="R$ {{vm.credit | number:2}}" label="Total Credits" icon-class="fa-bank"></value-box>
+    <value-box grid="4" color="bg-red" value="R$ {{vm.debt | number:2}}" label="Total Debts" icon-class="fa-money"></value-box>
+    <value-box grid="4" color="bg-blue" value="R$ {{vm.total | number:2}}" label="Consolidated value" icon-class="fa-bar-chart"></value-box>
   </div>
 </section>
