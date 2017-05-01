@@ -14,17 +14,17 @@
           <input ng-model="debt.name" class="form-control" placeholder="Enter the name" ng-readonly="vm.tabDelete" />
         </td>
         <td>
-          <input ng-model="debt.value" class="form-control" placeholder="Enter the value" ng-readonly="vm.tabDelete" type="number"
-          />
+          <input ng-model="debt.value" ng-change="vm.calculateValues()" class="form-control" placeholder="Enter the value" ng-readonly="vm.tabDelete"
+            type="number" />
         </td>
         <td>
           <input ng-model="debt.status" class="form-control" placeholder="Enter the status" ng-readonly="vm.tabDelete" />
         </td>
         <td class="table-actions">
           <div class="row">
-            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.addDebt($index)" class="btn btn-success"><i class="fa fa-plus"></i></button>
-            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.cloneDebt($index, debt)" class="btn btn-warning"><i class="fa fa-clone"></i></button>
-            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.deleteDebt($index)" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+            <button ng-disabled="vm.tabDelete" ng-click="vm.addDebt($index)" class="btn btn-success"><i class="fa fa-plus"></i></button>
+            <button ng-disabled="vm.tabDelete" ng-click="vm.cloneDebt($index, debt)" class="btn btn-warning"><i class="fa fa-clone"></i></button>
+            <button ng-disabled="vm.tabDelete" ng-click="vm.deleteDebt($index)" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
           </div>
         </td>
       </tr>

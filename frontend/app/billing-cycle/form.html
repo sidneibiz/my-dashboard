@@ -4,6 +4,12 @@
     <field id="month" label="Month:" grid="12 6 4" placeholder="Enter the month" type="number" model="vm.billingCycle.month"
       readonly="vm.tabDelete"></field>
     <field id="year" label="Year:" grid="12 6 4" placeholder="Enter the year" type="number" model="vm.billingCycle.year" readonly="vm.tabDelete"></field>
+    <div class="col-xs-12">
+      <fieldset>
+        <legend>Summary</legend>
+        <div ng-include="'billing-cycle/summary.html'"></div>
+      </fieldset>
+    </div>
     <div class="col-xs-12 col-sm-6">
       <fieldset>
         <legend>Credits</legend>
