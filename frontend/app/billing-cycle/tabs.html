@@ -3,32 +3,32 @@
 <section class="content">
   <div class="nav-tabs-custom" ng-controller="BillingCycleCtrl as vm">
     <ul class="nav nav-tabs">
-      <li>
+      <li ng-if="vm.tabList" ng-class="{active:vm.tabList}">
         <a href data-target="#tabList" data-toggle="tab">
           <i class="fa fa-list"></i> List
         </a>
       </li>
-      <li>
+      <li ng-if="vm.tabCreate">
         <a href data-target="#tabCreate" data-toggle="tab">
           <i class="fa fa-plus"></i> Create
         </a>
       </li>
-      <li>
+      <li ng-if="vm.tabChange" ng-class="{active:vm.tabChange}">
         <a href data-target="#tabChange" data-toggle="tab">
           <i class="fa fa-pencil"></i> Change
         </a>
       </li>
-      <li>
-        <a href data-target="#tabRemove" data-toggle="tab">
-          <i class="fa fa-trash-o"></i> Remove
+      <li ng-if="vm.tabDelete" ng-class="{active:vm.tabDelete}">
+        <a href data-target="#tabDelete" data-toggle="tab">
+          <i class="fa fa-trash-o"></i> Delete
         </a>
       </li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane" id="tabList" ng-include="'billing-cycle/list.html'"></div>
-      <div class="tab-pane" id="tabCreate" ng-include="'billing-cycle/form.html'"></div>
-      <div class="tab-pane" id="tabChange" ng-include="'billing-cycle/form.html'"></div>
-      <div class="tab-pane" id="tabRemove" ng-include="'billing-cycle/form.html'"></div>
+      <div ng-class="{active:vm.tabList}" ng-if="vm.tabList" class="tab-pane" id="tabList" ng-include="'billing-cycle/list.html'"></div>
+      <div ng-if="vm.tabCreate" class="tab-pane" id="tabCreate" ng-include="'billing-cycle/form.html'"></div>
+      <div ng-class="{active:vm.tabChange}" ng-if="vm.tabChange" class="tab-pane" id="tabChange" ng-include="'billing-cycle/form.html'"></div>
+      <div ng-class="{active:vm.tabDelete}" ng-if="vm.tabDelete" class="tab-pane" id="tabDelete" ng-include="'billing-cycle/form.html'"></div>
     </div>
   </div>
 </section>
