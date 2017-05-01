@@ -15,7 +15,7 @@ Back-end:
 
 ## Como posso testar a plataforma?
 ### Front-end:
-Após clonar o repositório e executar o comando `npm install` na pasta `frontend`. Após a instalação de todos os pacotes execute o comando `npm run dev` e acesse o link `http://localhost:3000` (ou a porta que você configurar) para acessar o aplicativo.
+Após clonar o repositório execute o comando `npm install` na pasta `frontend`. Após a instalação de todos os pacotes execute o comando `npm run dev` e acesse o link `http://localhost:3000` (ou a porta que você configurar) para acessar o aplicativo.
 
 ### Back-end:
 Ainda não disponível.
