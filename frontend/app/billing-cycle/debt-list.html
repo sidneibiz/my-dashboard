@@ -1,0 +1,33 @@
+<div class="col-xs-12">
+  <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="debt in vm.billingCycle.debts">
+        <td>
+          <input ng-model="debt.name" class="form-control" placeholder="Enter the name" ng-readonly="vm.tabDelete" />
+        </td>
+        <td>
+          <input ng-model="debt.value" class="form-control" placeholder="Enter the value" ng-readonly="vm.tabDelete" type="number"
+          />
+        </td>
+        <td>
+          <input ng-model="debt.status" class="form-control" placeholder="Enter the status" ng-readonly="vm.tabDelete" />
+        </td>
+        <td class="table-actions">
+          <div class="row">
+            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.addDebt($index)" class="btn btn-success"><i class="fa fa-plus"></i></button>
+            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.cloneDebt($index, debt)" class="btn btn-warning"><i class="fa fa-clone"></i></button>
+            <button ng-class="{disabled: vm.tabDelete}" ng-click="vm.deleteDebt($index)" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
