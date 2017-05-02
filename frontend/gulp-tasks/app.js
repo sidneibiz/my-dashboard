@@ -5,7 +5,13 @@ const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 
-gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.assets']);
+gulp.task('app', ['index.html', 'app.html', 'app.css', 'app.js', 'app.assets']);
+
+gulp.task('index.html', () => {
+  gulp.src('app/index.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('../'));
+});
 
 gulp.task('app.html', () => {
   gulp.src('app/**/*.html')
